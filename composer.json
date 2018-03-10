@@ -1,0 +1,21 @@
+{
+  "name": "allset/przelewy24-bundle",
+  "description": "More info soon...",
+  "type": "symfony-bundle",
+  "license": [
+    "MIT"
+  ],
+  "require": {
+    "php": "^5.5.9 || ^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Allset\\Przelewy24Bundle": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "v0.1"
+    }
+  }
+}
