@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Allset\\Przelewy24Bundle": ""
+      "Allset\\Przelewy24Bundle\\": ""
     }
   },
   "extra": {
