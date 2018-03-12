@@ -8,6 +8,7 @@ More info soon...
 Than add to your `routing.yml` file:
 
 ```yaml
+#app/config/routing.yml
 allset_przelewy24:
     resource: "@AllsetPrzelewy24Bundle/Resources/config/routing.xml"
 ```
@@ -15,12 +16,13 @@ allset_przelewy24:
 If you want to have access to Test Tools add this to `routing_dev.yml`:
 
 ```yaml
+#app/config/routing_dev.yml
 allset_przelewy24:
     resource: "@AllsetPrzelewy24Bundle/Resources/config/routing_dev.xml"
 ```
 
 ## Requirements
-*Symfony 3.3++* (becouse bundle is using Symfony Service Autowire)
+*Symfony 3.3++* (becouse bundle is using Symfony Service Autowire)  
 *Guzzle ^6.3* (already included in composer.json)
 
 ## Config
@@ -30,7 +32,7 @@ Add to your config folowing lines:
 allset_przelewy24:
     sandbox: true #or false
     merchant_id: <your-merchant-id>
-    crc_key:< your-crc>
+    crc_key: <your-crc>
 ```
 
 ## Usage
@@ -47,13 +49,11 @@ use Allset\Przelewy24Bundle\Model\Payment;
 class AppController extends Controller
 {
 	
-	// ...
+    // ...
 	
     public function processAction(ProcessFactory $processFactory)
     {
-	    $order = //... - You are creating your order here  
-	
-		// ...
+	    $order = // ... - You are creating your order here  
 		
         $payment = new Payment();
         $payment
@@ -71,13 +71,14 @@ class AppController extends Controller
         return $this->redirect($url);
     }
 	
-	// ...
+    // ...
 	
 }
 ```
 
 ##### 2. Register Payment Success Event Listener
 ```yaml
+#app/config/services.yml
     AppBundle\EventListener\Przelewy24\PaymentSuccessListener:
         tags:
             - { name: kernel.event_listener, event: przelewy24.event.payment_success }
