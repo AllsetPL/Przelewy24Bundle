@@ -1,4 +1,12 @@
 <?php
+/*
+ * This file is part of the AllsetPrzelewy24Bundle package.
+ *
+ * (c) Allset <https://allset.pl/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Allset\Przelewy24Bundle\DependencyInjection;
 
@@ -20,10 +28,13 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('allset_przelewy24');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
-
+        $rootNode
+            ->children()
+            ->booleanNode('sandbox')->end()
+            ->scalarNode('merchant_id')->end()
+            ->scalarNode('crc_key')->end()
+            ->end()
+            ->end();
         return $treeBuilder;
     }
 }

@@ -1,16 +1,18 @@
 <?xml version="1.0" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <services>
-        <service id="allset_przelewy24.example" class="Allset\Przelewy24Bundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <defaults autowire="true" autoconfigure="true" public="false"/>
+
+        <prototype namespace="Allset\Przelewy24Bundle\" resource="../../" exclude="../../{Entity,Migrations,Tests}"/>
+
+        <service id="Allset\Przelewy24Bundle\Creator\MerchantCreator" public="false">
+            <argument></argument>
+            <argument></argument>
+            <argument></argument>
         </service>
     </services>
-    -->
 </container>

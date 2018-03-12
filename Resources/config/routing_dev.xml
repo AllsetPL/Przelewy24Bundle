@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="allset_przelewy24_test" path="/p24-test">
+        <default key="_controller">AllsetPrzelewy24Bundle:Test:test</default>
+    </route>
+
+    <route id="allset_przelewy24_fake_success" path="/p24-fake-success/{sessionId}">
+        <default key="_controller">AllsetPrzelewy24Bundle:Test:fakeSuccess</default>
+    </route>
+</routes>

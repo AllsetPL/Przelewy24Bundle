@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <routes xmlns="http://symfony.com/schema/routing"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="allset_przelewy24_homepage" path="/test">
-        <default key="_controller">AllsetPrzelewy24Bundle:Default:index</default>
+    <route id="allset_przelewy24_status" path="/p24-status">
+        <default key="_controller">AllsetPrzelewy24Bundle:Status:getStatus</default>
     </route>
 </routes>
