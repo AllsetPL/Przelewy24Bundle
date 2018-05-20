@@ -1,22 +1,22 @@
 {
-  "name": "allset/przelewy24-bundle",
-  "description": "More info soon...",
-  "type": "symfony-bundle",
-  "license": [
-    "MIT"
-  ],
-  "require": {
-    "php": "^5.5.9 || ^7.0",
-    "guzzlehttp/guzzle": "^6.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "Allset\\Przelewy24Bundle\\": ""
+    "name": "allset/przelewy24-bundle",
+    "description": "This is Symfony 3.3+ P24 Bundle.",
+    "type": "symfony-bundle",
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": "^5.5.9 || ^7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Allset\\Przelewy24Bundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v1.0.0-dev"
+        }
     }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "v0.0.1"
-    }
-  }
 }
