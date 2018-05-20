@@ -2,8 +2,25 @@
 This is  **superb easy to use** Przelewy24 Bundle with bulit-in Symfony Events.
 
 ## Instalation
-Not on packagist yet. You can copy this repo to your project and install guzzle manually.  
-More info soon...
+```
+composer require allset/przelewy24-bundle
+```
+
+and then update your `AppKernel.php`:
+
+```php
+// ...
+class AppKernel extends Kernel
+// ...
+    public function registerBundles()
+    {
+        $bundles = [
+		// ...
+            new Allset\Przelewy24Bundle\AllsetPrzelewy24Bundle(),
+		// ...
+        ];
+	}
+```
 
 Than add to your `routing.yml` file:
 
