@@ -20,7 +20,7 @@ class Exception
     public static function getExceptionsFromString($string, $type)
     {
         $array = \explode('&', $string);
-        if ($array[0] == 'error=0' || $string = "") {
+        if ($array[0] == 'error=0' || $string == "" || empty($string)) {
             return;
         }
 
